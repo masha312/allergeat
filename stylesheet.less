@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,400,500,600');
+@import 'variables.less';
+@import 'checkboxes.less';
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-weight: @fontweightlight;
+    letter-spacing: @letter-spacing;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+h2 {
+    font-weight: @fontweightlight;
+}
+
+#checkboxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+img {
+    height: 400px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+#page--main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 5%;
+  }
+
+/* Inputs */
+#location, #email {
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.616);
+    font-size: 16px;
+    width: 280px;
+    padding-bottom: 8px;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: @letter-spacing;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#content {
+    margin-top: 320px;
+
+    @media (min-width: 768px) {
+        margin-left: 72px;
+        margin-top: 0 !important;
+    }
+}
+
+#construction {
+    margin-top: 320px;
+
+    @media (min-width: 768px) {
+        margin-left: 72px;
+        margin-top: 0 !important;
+    }
+
+    display: none;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#button {
+    background: none;
+    border: none;
+    height: 48px;
+    width: 168px;
+    transition-duration: @transition-duration;
+    background-color: @pink;
+    border-radius: 16px;
+    color: white;
+    font-weight: @fontweightbold;
+    text-transform: uppercase;
+    letter-spacing: @letter-spacing;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: @hoverpink;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+  }
+
+
+// Remove powered by Google from autocomplete
+  .pac-container:after{
+    content:none !important;
+}
+
